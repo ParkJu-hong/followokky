@@ -1,93 +1,76 @@
 import React from "react";
 import styled from "styled-components";
 import { Sidebar } from "./components/Sidebar";
+import EditorsChoice from './components/EditorsChoice';
+import WeeklyBest from './components/WeeklyBest';
+import QandA from './components/QandA';
+import AdTwice from './components/AdTwice';
+import Community from './components/Community';
+import SmallBoxOne from "./components/SmallBoxOne";
+import SmallBoxTwo from "./components/SmallBoxTwo";
+
+/*
+  22.02.01 (화) 해야할 일
+  1. AppRouter컴포넌트 혹은 Main 컴포넌트 만들어서 App컴포넌트 깔끔하게 클린코딩 진행할 것
+  2. 각 컴포넌트 안의 내용들 하드코딩으로 구현할 것
+
+  3. 1, 2를 모두 다 했을 시, 사이드바 메뉴 클릭할 시 나오는 것과 더 나아가서는 
+     react-router-dom 사용하여 페이지 이동할 수 있도록 구현할 것
+*/
+
+
 // vertical-align?
 function App() {
   return (
     <Main>
       <Sidebar />
-      <div style={{ position: "static"}}>
-      <MainAd />
-      <EditorsChoice />
-      <WeeklyBest />
-      <QandA />
-      <AdTwice />
-      <Community />
-      <SmallBoxOne />
-      <SmallBoxTwo />
-      <div style={{ position: "relative", left: "600px"}}>안녕하세요</div>
+      <SideAd><h1 style={{ textAlign: "center"}}>광고</h1></SideAd>
+      <div 
+      className="forRelation"
+      style={{ marginLeft: "300px"}}
+      >
+      <MainAd ><h1 style={{ textAlign: "center"}}>광고</h1></MainAd>
+      <Div>
+        <EditorsChoice/>
+        <WeeklyBest />
+      </Div>
+      <Div>
+        <QandA /> 
+        <AdTwice /> 
+      </Div>
+      <Div>
+        <Community />
+        <SmallBoxOne />
+        <SmallBoxTwo />
+      </Div>
+      <Footer >
+        Footer
+      </Footer>
       </div>
     </Main>
   );
 }
-
-const SmallBoxOne = styled.div`
-  position: relative;
-  border: 1px solid red;
-  left: 840px;
-  width: 250px;
-  height: 300px;
-  bottom: 800px;
+const SideAd = styled.div`
+  position: fixed;
+  border: 1px solid black;
+  top: 100px;
+  left: 1200px;
+  width: 200px;
+  height: 500px;
 `
-const SmallBoxTwo = styled.div`
+const Footer = styled.footer`
   position: relative;
-  border: 1px solid red;
-  left: 840px;
-  width: 250px;
-  height: 300px;
-  bottom: 700px;
+  top: 200px;
 `
 
-const Community = styled.div`
-  position: relative;
-  border: 1px solid red;
-  bottom: 140px;
-  left: 260px;
-  width: 430px;
-  height: 480px;
-`
-
-const AdTwice = styled.div`
-  position: relative;
-  border: 1px solid red;
-  bottom: 500px;
-  left: 780px;
-  width: 300px;
-  height: 300px;
-`
-
-const QandA = styled.div`
-  position: relative;
-  border: 1px solid red;
-  left: 260px;
-  width: 430px;
-  height: 480px;
-`
-
-const WeeklyBest = styled.div`
-  position: relative;
-  bottom: 202px;
-  left: 700px;
-  border: 1px solid red;
-  width: 370px;
-  height: 200px;
-  
-`
-
-const EditorsChoice = styled.div`
-  position: relative;
-  top: 80px;
-  left: 260px;
-  border: 1px solid red;
-  width: 370px;
-  height: 280px;
+const Div = styled.div`
+  display: flex;
 `
 
 const MainAd = styled.div`
   position: relative;
   top: 20px;
-  left: 280px;
-  border: 1px solid red;
+  border: 1px solid black;
   width: 728px;
   height: 90px;
 `
