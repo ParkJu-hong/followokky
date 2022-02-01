@@ -4,7 +4,7 @@ import styled from "styled-components";
 function AdTwice() {
     return (
         <Main>
-            AdTwice
+            <h1 style={{ textAlign: "center"}}>광고</h1>
         </Main>
     )
 }
@@ -15,6 +15,7 @@ const Main = styled.div`
   top: 30px;
   width: 300px;
   height: 300px;
+  margin-left: 25px;
 `
 
 export default AdTwice

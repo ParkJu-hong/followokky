@@ -16,6 +16,8 @@ import SmallBoxTwo from "./components/SmallBoxTwo";
 
   3. 1, 2를 모두 다 했을 시, 사이드바 메뉴 클릭할 시 나오는 것과 더 나아가서는 
      react-router-dom 사용하여 페이지 이동할 수 있도록 구현할 것
+
+     
 */
 
 
@@ -27,7 +29,7 @@ function App() {
       <SideAd><h1 style={{ textAlign: "center"}}>광고</h1></SideAd>
       <div 
       className="forRelation"
-      style={{ marginLeft: "300px"}}
+      style={{ marginLeft: "250px"}}
       >
       <MainAd ><h1 style={{ textAlign: "center"}}>광고</h1></MainAd>
       <Div>
